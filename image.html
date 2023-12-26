@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function image_picker(){
+            const daftar_gambar = ["Kelinci.jpg", "Kucing.jpg", "Koala.jpg", "Panda.jpg", "Anjing.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if( pilihan == "kelinci"){
+                let select = daftar_gambar[0];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "kucing"){
+                let select = daftar_gambar[1];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "koala"){
+                let select = daftar_gambar[2];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "Panda"){
+                let select = daftar_gambar[3];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if( pilihan == "Anjing"){
+                let select = daftar_gambar[4];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+
+    <select name="" id="option" onchange="image_picker()">
+        <option value=""> Pilih Gambar :</option>
+        <option value="kelinci"> Kelinci </option>
+        <option value="kucing"> Kucing </option>
+        <option value="kucing"> Koala </option>
+        <option value="kucing"> Panda </option>
+        <option value="kucing"> Anjing </option>
+        
+       
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px">
+    </div>
+
+
+</body>
+</html>
